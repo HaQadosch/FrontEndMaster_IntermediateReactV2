@@ -1,0 +1,15 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Details matches the snapshot 1`] = `
+<DocumentFragment>
+  <h1>
+    <span
+      aria-label="sand-glass"
+      role="img"
+    >
+      ⌛
+    </span>
+    Loading...
+  </h1>
+</DocumentFragment>
+`;
