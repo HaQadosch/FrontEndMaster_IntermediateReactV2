@@ -1,0 +1,27 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`NavBar matches the snapshot 1`] = `
+<DocumentFragment>
+  .emotion-0 {
+  background-color: #333;
+  padding: 15px;
+}
+
+<header
+    class="emotion-0"
+  >
+    <a
+      aria-current="page"
+      href="/"
+    >
+      Adopt me !
+    </a>
+    <span
+      aria-label="logo"
+      role="img"
+    >
+      🐩
+    </span>
+  </header>
+</DocumentFragment>
+`;

@@ -1,9 +1,10 @@
 import React, { useState } from 'react';
-import { Router, Link } from '@reach/router';
+import { Router } from '@reach/router';
 import './App.css';
 import { SearchParams } from './SearchParams';
 import { Details } from './Details';
 import { ThemeContext } from './ThemeContext';
+import { NavBar } from './NavBar';
 
 export const App: React.FC = () => {
   const [color, setColor] = useState<string>('darkblue');
@@ -11,9 +12,7 @@ export const App: React.FC = () => {
   return (
     <ThemeContext.Provider value={[color, setColor]}>
       <div>
-        <header>
-          <Link to={'/'}>Adopt me!</Link>
-        </header>
+        <NavBar />
         <React.StrictMode>
           <Router>
             <SearchParams path='/' />
