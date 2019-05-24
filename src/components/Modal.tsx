@@ -22,3 +22,6 @@ export const Modal: React.FC = ({ children }) => {
 
   return createPortal(<div>{children}</div>, elt.current);
 };
+
+// Lazy loading the component in App.
+export default Modal;

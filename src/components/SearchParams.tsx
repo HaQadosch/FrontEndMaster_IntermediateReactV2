@@ -77,3 +77,6 @@ export const SearchParams: React.FC<{ path: string }> = () => {
     </div>
   );
 };
+
+// Lazy leading the component in App.
+export default SearchParams;

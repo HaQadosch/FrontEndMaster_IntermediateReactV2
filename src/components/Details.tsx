@@ -1,9 +1,11 @@
-import React, { useEffect, useState, useReducer, Dispatch, useContext } from 'react';
+import React, { useEffect, useState, useReducer, Dispatch, useContext, lazy } from 'react';
 import pet, { Animal, Address, Breeds } from '@frontendmasters/pet';
 import { Caroussel } from './Caroussel';
 import { ThemeContext } from './ThemeContext';
 import { navigate } from '@reach/router';
-import { Modal } from './Modal';
+// import { Modal } from './Modal';
+
+const Modal = lazy(() => import('./Modal'));
 
 type DetailsAnimal = Pick<Animal, 'name' | 'type' | 'description' | 'photos' | 'url'> &
   Pick<Address, 'city' | 'state'> &
@@ -96,3 +98,6 @@ export const Details: React.FC<{ path: string; id?: string }> = ({ id = '' }) =>
     </div>
   );
 };
+
+// Lazy loading in App requires import of default.
+export default Details;
