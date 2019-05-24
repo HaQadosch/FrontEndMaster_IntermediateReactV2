@@ -2,13 +2,43 @@
 
 exports[`NavBar matches the snapshot 1`] = `
 <DocumentFragment>
-  .emotion-0 {
-  background-color: #333;
+  @keyframes animation-0 {
+  to {
+    -webkit-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes animation-0 {
+  to {
+    -webkit-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+
+.emotion-1 {
+  background-color: #d9c148;
   padding: 15px;
 }
 
+.emotion-0 {
+  font-size: 4rem;
+  display: inline-block;
+  -webkit-animation: 5s animation-0 linear infinite;
+  animation: 5s animation-0 linear infinite;
+}
+
+.emotion-0:hover {
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+  -webkit-animation: 1s animation-0 linear infinite reverse;
+  animation: 1s animation-0 linear infinite reverse;
+}
+
 <header
-    class="emotion-0"
+    class="emotion-1"
   >
     <a
       aria-current="page"
@@ -18,6 +48,7 @@ exports[`NavBar matches the snapshot 1`] = `
     </a>
     <span
       aria-label="logo"
+      class="emotion-0"
       role="img"
     >
       🐩
