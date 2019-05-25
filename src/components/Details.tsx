@@ -2,7 +2,7 @@ import React, { useEffect, useState, useReducer, Dispatch, useContext, lazy } fr
 import pet, { Animal, Address, Breeds } from '@frontendmasters/pet';
 import { Caroussel } from './Caroussel';
 import { ThemeContext } from './ThemeContext';
-import { navigate } from '@reach/router';
+import { navigate, RouteComponentProps } from '@reach/router';
 // import { Modal } from './Modal';
 
 const Modal = lazy(() => import('./Modal'));
@@ -22,7 +22,8 @@ const animalReducer = (currentState: DetailsAnimal, newState: Animal): DetailsAn
   return { ...currentState, ...restState, city, state, primary };
 };
 
-export const Details: React.FC<{ path: string; id?: string }> = ({ id = '' }) => {
+// export const Details: React.FC<{ path: string; id?: string }> = ({ id = '' }) => {
+export const Details: React.FC<RouteComponentProps<{ id?: string }>> = ({ id = '' }) => {
   const [loading, setLoading] = useState<boolean>(true);
   const [, /*error*/ setError] = useState<Error>();
   const [theme /*, setTheme*/] = useContext<(string | any)[]>(ThemeContext);
