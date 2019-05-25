@@ -11,7 +11,7 @@ export const Caroussel: React.FC<{ photos: Photo[] }> = ({ photos: media }) => {
     setPhotos(media.map(photo => ({ large: largeDefault, small: smallDefault, ...photo })));
   }, [media]);
 
-  const onImgClick = (index: number): ReactEventHandler => ({ target }: React.SyntheticEvent) => {
+  const onImgClick = (index: number): ReactEventHandler => ({ target }: React.MouseEvent<HTMLElement>) => {
     setActive(index);
   };
 

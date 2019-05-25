@@ -1,7 +1,11 @@
 import React, { useState } from 'react';
 
-export const useDropdown = (label: string, initialValue: any, options: string[]) => {
-  const [value, setValue] = useState<any>(initialValue);
+export const useDropdown = (
+  label: string,
+  initialValue: string,
+  options: string[],
+): [string, React.Dispatch<string>, () => JSX.Element] => {
+  const [value, setValue] = useState(initialValue);
   const id = `use-dropdown-${label.replace(' ', '').toLocaleLowerCase()}`;
   const onSelectChange: React.ChangeEventHandler<HTMLSelectElement> = ({ target: { value: newVal } }) =>
     setValue(newVal);

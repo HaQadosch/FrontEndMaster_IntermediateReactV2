@@ -51,7 +51,7 @@ export const Details: React.FC<RouteComponentProps<{ id?: string }>> = ({ id = '
 
   useEffect(() => {
     pet
-      .animal(parseInt(id))
+      .animal(parseInt(id, 10))
       .then(({ animal }) => {
         setState(animal);
         setLoading(false);
